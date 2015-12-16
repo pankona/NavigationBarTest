@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyC-cg-Cxg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="frS-Wn-TK3">
+            <objects>
+                <navigationController id="XyC-cg-Cxg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uc-fF-eR3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KeS-EF-gbn" kind="relationship" relationship="rootViewController" id="19a-I2-oQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEL-jW-dNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1637" y="247"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="ULt-w2-sDd">
+            <objects>
+                <viewController id="KeS-EF-gbn" customClass="RootViewController" customModule="NavigationBarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gYr-ad-czi"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJ5-Mj-SfR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="usO-gB-nP5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aec-Kc-4IQ">
+                                <rect key="frame" x="254" y="399" width="92" height="30"/>
+                                <state key="normal" title="OpenWindow"/>
+                                <connections>
+                                    <action selector="openWindowClicked:" destination="KeS-EF-gbn" eventType="touchUpInside" id="0NY-R2-xMJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it6-as-Wn9">
+                                <rect key="frame" x="240" y="323" width="120" height="30"/>
+                                <state key="normal" title="デフォルトページ"/>
+                                <connections>
+                                    <action selector="defaultPageClicked:" destination="KeS-EF-gbn" eventType="touchUpInside" id="wo6-zA-x24"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG1-qC-5KE">
+                                <rect key="frame" x="263" y="361" width="75" height="30"/>
+                                <state key="normal" title="連携アプリ"/>
+                                <connections>
+                                    <action selector="CCAppClicked:" destination="KeS-EF-gbn" eventType="touchUpInside" id="XsJ-dS-rZV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-cK-E6T">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="ノーマル"/>
+                                <connections>
+                                    <action selector="normalClicked:" destination="KeS-EF-gbn" eventType="touchUpInside" id="cB1-jh-1Rl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-sX-KJW">
+                                <rect key="frame" x="284" y="229" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="olf-Km-TRi" kind="show" id="7du-CN-fgl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aec-Kc-4IQ" firstAttribute="centerX" secondItem="usO-gB-nP5" secondAttribute="centerX" id="5GJ-Uw-4Pr"/>
+                            <constraint firstItem="K1b-cK-E6T" firstAttribute="top" secondItem="hrU-sX-KJW" secondAttribute="bottom" constant="26" id="5sq-mR-GRC"/>
+                            <constraint firstItem="Aec-Kc-4IQ" firstAttribute="top" secondItem="rG1-qC-5KE" secondAttribute="bottom" constant="8" id="8rp-NQ-Mat"/>
+                            <constraint firstItem="it6-as-Wn9" firstAttribute="top" secondItem="K1b-cK-E6T" secondAttribute="bottom" constant="8" id="AOq-Ow-qcF"/>
+                            <constraint firstItem="rG1-qC-5KE" firstAttribute="centerX" secondItem="usO-gB-nP5" secondAttribute="centerX" id="C1i-5I-7xe"/>
+                            <constraint firstItem="K1b-cK-E6T" firstAttribute="centerX" secondItem="usO-gB-nP5" secondAttribute="centerX" id="CTI-JF-wME"/>
+                            <constraint firstItem="K1b-cK-E6T" firstAttribute="centerY" secondItem="usO-gB-nP5" secondAttribute="centerY" id="DP1-js-lmN"/>
+                            <constraint firstItem="it6-as-Wn9" firstAttribute="centerX" secondItem="usO-gB-nP5" secondAttribute="centerX" id="Oy4-Ly-8tN"/>
+                            <constraint firstItem="hrU-sX-KJW" firstAttribute="centerX" secondItem="usO-gB-nP5" secondAttribute="centerX" id="ZLe-RB-v2h"/>
+                            <constraint firstItem="rG1-qC-5KE" firstAttribute="top" secondItem="it6-as-Wn9" secondAttribute="bottom" constant="8" id="z7L-77-2gG"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="e0r-Y6-2QK">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTL-Nq-zGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="251"/>
+        </scene>
+        <!--navigation bar title-->
+        <scene sceneID="1md-jg-D41">
+            <objects>
+                <viewController id="olf-Km-TRi" customClass="NextViewController" customModule="NavigationBarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tzp-J3-3Xc"/>
+                        <viewControllerLayoutGuide type="bottom" id="uS4-Zm-cm5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LPb-O6-5Wl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="navigation bar title" id="bzr-h8-nOc">
+                        <barButtonItem key="rightBarButtonItem" image="Image" style="plain" id="avy-ps-F5D">
+                            <connections>
+                                <action selector="rightButtonClicked:" destination="olf-Km-TRi" id="hjr-p7-gEL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mpr-Gi-ARi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218" y="251"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="48" height="48"/>
+    </resources>
+    <color key="tintColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+</document>
